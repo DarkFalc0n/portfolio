@@ -1,11 +1,9 @@
 import Hero from "../components/hero";
-import { Red_Hat_Display } from "next/font/google";
-
-const redHatDisplay = Red_Hat_Display({ subsets: ["latin"] });
+import { Red_Hat_Display, Sulphur_Point } from "next/font/google";
 
 export default function Home() {
   return (
-    <main className={`${redHatDisplay.className} bg-charcoal-black`}>
+    <main className={`font-heading bg-charcoal-black`}>
       <Hero />
     </main>
   );

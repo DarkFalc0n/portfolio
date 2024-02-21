@@ -8,7 +8,7 @@ const LinkText: React.FC<{ children: string }> = ({ children }) => {
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="text-right cursor-pointer mb-10"
+      className="text-right cursor-pointer mb-[3.2rem] font-body"
     >
       {children}
       <br />

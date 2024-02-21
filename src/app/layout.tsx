@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 
+import localFont from "next/font/local";
 import "./globals.css";
+
+const Nikea = localFont({
+  src: "./fonts/NIKEA.otf",
+  variable: "--font-NIKEA",
+});
 
 export const metadata: Metadata = {
   title: "Pratyay Roy",
@@ -13,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={Nikea.variable}>
       <body>{children}</body>
     </html>
   );
