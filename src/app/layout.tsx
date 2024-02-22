@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import localFont from "next/font/local";
 import "./globals.css";
+import { MouseCursorProvider } from "../context/mouseCursorProvider";
 
 const Nikea = localFont({
   src: "./fonts/NIKEA.otf",
@@ -20,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={Nikea.variable}>
-      <body>{children}</body>
+      <body>
+        <MouseCursorProvider>
+          {children}
+        </MouseCursorProvider>
+      </body>
     </html>
   );
 }
